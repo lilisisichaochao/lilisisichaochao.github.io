@@ -152,6 +152,35 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2022/07/04/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C2/">
+                神经网络2
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2022-07-04</span>
+            
+            
+                <a href="http://example.com/2022/07/04/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C2/#disqus_thread" class="comments article-comment-link">留言</a>
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>感知机<br>感知机由美国学者Frank在1957年提出。感知机是学习通向神经网络深度学习的重要思想。<br>1、感知机是什么<br>感知机接收多个输入信号，输出一个信号。感知机的信号会形成流向前输出信号，感知机的信<br>号有“流&#x2F;不流”（1&#x2F;0）两种取值。每个输入信号送往神经元（节点）的过程中会乘以对应的<br>w1,w2。。。权重。当神经元计算传输过来的信号总和，当超过某个界限，就会输出1，称为<br>“神经元被激活”，这个界限称为阈值，用特定符号表示。感知机每个输入信号都有各自固有<br>的权重，这个权重都发挥着控制各个信号的作用。也就是说，权重越大，对应权重的信号的重<br>要性也就越高。<br>2、简单逻辑电路<br>与门。与门是两个输入一个输出的门电路，与门仅在两个输入都是1时输出1，其余都为零。参数<br>选择方法（0.5，05，0.7）且有无数种组合。<br>与非门。与非门和与门是两个完全相反的门电路，与非门当两个输入都是1时为零，其余<br>都为1.参数组合（-0.5，-0.5，-0.7）即和与门取相反数。<br>或门。或门只要一个输入为1，输出就是1。<br>3、感知机的实现<br>  现在，利用python来实现刚才的逻辑电路，先定义一个接收参数x1,x2的AND函数<br> def AND(x1,x2):<br>       w1,w2,theta&#x3D;0.5,0.5,0.7<br>       tmp&#x3D;x1<em>w1+x2</em>w2<br>       if tmp&lt;&#x3D;theta:<br>            return 0<br>       elif tmp&gt;theta:<br>            return 1<br>然后初始化函数就可以得到想要的效果<br>将theta换为-b得到b+w1<em>x1+w2</em>x2&lt;&#x3D;0,其中b为偏置，w1,w2为权重<br>实现权重和偏置：def AND(x1,x2):<br>                              x&#x3D;np.array([x1,x2])<br>                              w&#x3D;np.arry([0.5,0.5])<br>                              b&#x3D;-0.7<br>                              tmp&#x3D;np.(w*x)+b<br>                              if tmp&lt;&#x3D;0:<br>                                   return 0<br>                             else:<br>                                   return 1<br>4、感知机的局限性<br>异或门。异或门也被称为逻辑异或电路，仅当输入的x1,x2的一方为1时输出才会是1。<br>由前面可知异或门是不能被实现的。根据权重和阈值组成的方程画图可以得到，一条<br>一条直线无法把输出1和0的区间正确的分开，所以不能实现。<br>线性和非线性。当权重图中输入不同结果的区间不能被正确的分开，此时可以把“直线<br>”这个限制条件去掉。因此可知感知机的局限性就在于它只能表示由一条直线分割的空间<br>，而用曲线分开的不能用感知机正确表示。曲线分割而成的空间称为非线性空间，由直线<br>分割而成的空间称为线性空间。<br>多层感知机。感知机的绝妙之处就在于它可以叠加层。叠加了多层的感知机也称为多层<br>感知机。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2022/06/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C1/">
                 神经网络学习1
             </a>
@@ -270,6 +299,10 @@
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
         <h2>Recent Posts</h2>
         <ul>
+            
+            <li>
+                <a class="footer-post" href="/2022/07/04/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C2/">神经网络2</a>
+            </li>
             
             <li>
                 <a class="footer-post" href="/2022/06/25/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C1/">神经网络学习1</a>
